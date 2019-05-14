@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RxBDD_Example' do
+  pod 'RxBDD', :path => '../'
+
+  target 'RxBDD_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
