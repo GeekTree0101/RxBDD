@@ -1,6 +1,6 @@
 <img src="https://github.com/GeekTree0101/RxBDD/blob/master/resources/logo.png" />
 
-[![CI Status](https://travis-ci.com/GeekTree0101/RxBDD.svg?branch=master)
+![CI Status](https://travis-ci.com/GeekTree0101/RxBDD.svg?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/RxBDD.svg?style=flat)](https://cocoapods.org/pods/RxBDD)
 [![License](https://img.shields.io/cocoapods/l/RxBDD.svg?style=flat)](https://cocoapods.org/pods/RxBDD)
 [![Platform](https://img.shields.io/cocoapods/p/RxBDD.svg?style=flat)](https://cocoapods.org/pods/RxBDD)
