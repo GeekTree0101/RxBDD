@@ -39,6 +39,35 @@ shared.when(#OUTPUT_OBSERVABLE) // Observable<#EXPECTED_OUTPUT_TYPE>
       })
 ```
 
+> Description
+```swift
+    func testMultiplyWithRxBDD() {
+        let integerInput = PublishSubject<Int>.init()
+        let multiplyOutput: Observable<Int> = input.map({ $0 * $0 }).asObservable()
+        
+        let test = RxBDD.init(inputObservable: integerInput,
+                              outputType: Int.self)
+                   
+        // Given: I have 10, 20, 30 Integer input events
+        test.given([.next(100, 10),
+                    .next(200, 20),
+                    .next(300, 30)])  
+                    
+        // When: It should multiply input integer events
+        test.when(output)
+        
+        // Then: It should have multiplied integer events
+        test.then({ outputs in
+                XCTAssertEqual(outputs,
+                               [.next(100, 100),
+                                .next(200, 400),
+                                .next(300, 900)])
+            })
+    }
+```
+
+
+
 [More See](https://github.com/GeekTree0101/RxBDD/blob/master/Example/Tests/RxBDDTests.swift)
 
 
